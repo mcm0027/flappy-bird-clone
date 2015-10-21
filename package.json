@@ -1,0 +1,33 @@
+{
+  "name": "flappy-bird",
+  "version": "1.0.0",
+  "description": "My version of the Flappy Bird game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcm0027/flappy-bird-game.git"
+  },
+  "keywords": [
+    "flappy",
+    "bird",
+    "fun",
+    "game",
+    "browser-based",
+    "side-scroll",
+    "side-scrolling",
+    "score",
+    "high-score"
+  ],
+  "author": "Matt Morris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcm0027/flappy-bird-game/issues"
+  },
+  "homepage": "https://github.com/mcm0027/flappy-bird-game#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
