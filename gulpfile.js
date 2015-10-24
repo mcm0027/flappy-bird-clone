@@ -10,6 +10,10 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var postcss      = require('gulp-postcss');
+var sourcemaps   = require('gulp-sourcemaps');
+var autoprefixer = require('autoprefixer');
+
 
 // JavaScript linting task
 gulp.task('jshint', function() {
@@ -55,6 +59,17 @@ gulp.task('images', function() {
   return gulp.src('./img/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./build/img'));
+});
+
+
+
+gulp.task('autoprefixer', function () {
+   
+    return gulp.src('.build/css/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('.build/css/cssFinal/'));
 });
 
 // Watch task

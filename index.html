@@ -6,87 +6,126 @@
     <title>Flappy Bird Clone Landing Page</title>
     <meta name="description" content="A fun new version of the hit game.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href='//fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
-
-
-	<script type="text/javascript">var z1gna06008sx1e3;(function(d, t) {
-		var s = d.createElement(t), options = {
-		'userName':'mcm0027',
-		'formHash':'z1gna06008sx1e3',
-		'autoResize':true,
-		'height':'421',
-		'async':true,
-		'host':'wufoo.com',
-		'header':'show',
-		'ssl':true};
-		s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-		s.onload = s.onreadystatechange = function() {
-		var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-		try { z1gna06008sx1e3 = new WufooForm();z1gna06008sx1e3.initialize(options);z1gna06008sx1e3.display(); } catch (e) {}};
-		var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-		})(document, 'script');</script>
-		<script type="text/javascript">var switchTo5x=true;</script>
-		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-		<script type="text/javascript">stLight.options({publisher: "07c46eb6-fa80-455a-b397-a3bd2a78fb84", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+		
 </head>
 <body>
 	<heading>
-		<div class="logo"> 
-			<h1>Flappy Bird</h1>
-		</div>
-		<nav>
-			<ul class="navLinks">
+	  <section class="heading-container">
+	    <div class="birdLeft">
+	      <img src="./img/bird-left.png">
+	    </div>
+  		<div class="logo"> 
+  			<img src="./img/flappy-bird-logo.png">
+  		</div>
+	    <div class="birdRight">
+	      <img src="./img/bird-right.png">
+	    </div>  		
+  	<div class="nav">
+      <button class="menu"><i id="toggle" class="fa fa-chevron-down"></i></button>
+    </div>
+		</section>
+  	<nav class="navLinks">
+			<ul>
 				<li><a href="index.html" class="selected">Home</a></li>
 				<li><a href="about.html">About Us</a></li>
 				<li><a href="contact.html">Contact Us</a></li>
 			<ul>
 		</nav>
+		
+		
 	</heading>
 
 	<body>
-		<section class="splash">
-			<h2>Caution: Flappy Bird is so fun that some people are finding it addictive!</h2>
-			<h3>Looks can be decieving. Flappy Bird may look very simple in terms of play and visual style, but be careful... because it is so much fun that many people literally can't stop playing. How far will your bird flap? Will you beat your friends? Will you top the leaderboards online? Will you stop long enough to eat and drink? Will your friends and family ever see you without you eyes glued to a screen again?<h3>
+	  
+	  <ul class="submenu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+		
+    <section id="slide-background">
+  		<section class="splash-top slick-slider">
+  			<div class="slick-slide">
+  			  <img class="tall" src="./img/start-screen-flappy-bird.jpeg">
+  			  <img class="wide" src="./img/wide-start-screen-flappy-bird.jpeg">
+  			  <p class="img-text">On your marks, get set, flap!</p>
+  			</div>
+  			<div class="slick-slide">
+  			  <img class="tall" src="./img/get-ready-flappy-bird.jpg">
+  			  <img class="wide" src="./img/wide-get-ready-flappy-bird.jpg">
+  			   <p class="img-text">Get ready for flappy fun!</p>
+  			</div>
+  			<div class="slick-slide">
+  			  <img class="tall" src="./img/gameplay-flappy-bird.jpg">
+  			  <img class="wide" src="./img/wide-gameplay-flappy-bird.jpg">
+  			   <p class="img-text">Watch out for the pipes!</p>
+  			</div>
+  			<div class="slick-slide">
+  			  <img class="tall" src="./img/game-over-flappy-bird.jpg">
+  			  <img class="wide" src="./img/wide-game-over-flappy-bird.jpg">
+  			   <p class="img-text">Can you beat your last score?</p>
+  			</div>
+  			<div class="slick-slide" id="cta-slide">
+  			  <img class="tall" src="./img/green-play.png">
+  			  <img class="wide" src="./img/green-wide-play.png">
+  			  <p class="img-text"><span class="caution">Caution:</span> It's addictivly fun.</p>
+  			</div>
+  		</section>
 		</section>
-
-		<section class="screenshots">
-			<ul>
-				<li><img src="./img/start-screen-flappy-bird.jpeg"></li>
-				<li><img src="./img/get-ready-flappy-bird.jpg"></li>
-				<li><img src="./img/gameplay-flappy-bird.png"></li>
-				<li><img src="./img/game-over-flappy-bird.jpg"></li>
-			</ul>
+		<section class="body-text">
+			<h2><span class="caution">Caution:</span> Flappy Bird is so fun that some people are finding it addictive!</h2>
+			<h3>Looks can be decieving. Flappy Bird is so simple, yet so much fun. You just tap the screen and try not to hit the pipes. Be careful, though, because it can be so much fun that some people can't stop playing.</h3>
+			<img class="tall" src="./img/phone.jpg">
+			<img class="wide" src="./img/phone.jpg">
+			<h3>How far will your bird flap? Will you beat your friends' scores? Will you stop long enough to eat and drink? Will your friends and family ever see you without you eyes glued to a screen again?</h3>
 		</section>
+		<hr>
 		<section class="buttons">
 			<h3>What are you waiting for?</h3>
 			<h3>Don't keep all the fun to yourself.</h3>
 			<h3>Let your friends know about Flappy Bird!</h3>
-			<span class='st_facebook_large' displayText='Facebook'></span>
-			<span class='st_twitter_large' displayText='Tweet'></span>
-			<span class='st_email_large' displayText='Email'></span>
-			<span class='st_googleplus_large' displayText='Google +'></span>
-		</section>
-
-		<section class="cta">
-			<h1>Click below to Play Now!</h1>
-			<button>PLAY!</button>
+			<ul class="share-buttons">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.mattmorrisdev.net%2Fflappy-bird&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="./img/color/Facebook.png"></a></li>
+        <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fwww.mattmorrisdev.net%2Fflappy-bird&text=:%20http%3A%2F%2Fwww.mattmorrisdev.net%2Fflappy-bird" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="./img/color/Twitter.png"></a></li>
+        <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.mattmorrisdev.net%2Fflappy-bird" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="./img/color/Google+.png"></a></li>
+        <li><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fwww.mattmorrisdev.net%2Fflappy-bird&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><img src="./img/color/Tumblr.png"></a></li>
+        <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.mattmorrisdev.net%2Fflappy-bird&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="./img/color/Reddit.png"></a></li>
+        <li><a href="mailto:?subject=&body=:%20http%3A%2F%2Fwww.mattmorrisdev.net%2Fflappy-bird" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="./img/color/Email.png"></a></li>
+      </ul>
 		</section>
 		
-		<section>
+		<hr>
+
+		<div class="cta-bottom">
+			  <img class="tall" src="./img/play.png">
+			  <img class="wide" src="./img/wide-play.png">
+		</div>
+		
+		<hr>
+		
+		<section class="bottom-form">
 			<div id="wufoo-z1gna06008sx1e3">
 			Fill out my <a href="https://mcm0027.wufoo.com/forms/z1gna06008sx1e3">online form</a>.
 			</div>
 			<div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">Online contact and registration forms from <a href="http://www.wufoo.com">Wufoo</a>.</div>
 		</section>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>`
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="//w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">stLight.options({publisher: "07c46eb6-fa80-455a-b397-a3bd2a78fb84", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 	
 </body>
+
 </html>
