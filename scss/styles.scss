@@ -5,6 +5,7 @@
 @import "base/buttons";
 @import "components/slick/slick-theme";
 @import "components/slick/slick";
+@import "components/modal";
 
 $thick-border: 2px solid #555;
 $thin-border: 1px solid #555;
@@ -27,16 +28,16 @@ heading {
 
 .heading-container {
   @include outer-container;
-  //clear: both;
-//  content: "";
- // display: block;
+//    clear: both;
+  //  content: "";
+    //display: block;
 }
   .logo {
   @include span-columns(8);
 
     img {
-      margin: 1em 2em 0 1.5em;
-      width: 90%;
+      margin: 1em 1em 0 1.5em;
+      width: 6%;
     }
   }
   
@@ -51,7 +52,16 @@ heading {
   
   .nav {
   @include span-columns(4);
-  text-align: center;
+    text-align: center;
+    display: inline-block;
+    float: right;
+    height: 100%;
+  }
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 .navLinks {
   @include span-columns(12);
@@ -80,10 +90,8 @@ ul{
 
 #slide-background {
   clear: both;
-  background: #3CD690;
+  background: #9CE35A;
   width: 100%;
-  border-top: $thick-border;
-  border-bottom: $thick-border;
 }
 
 .splash-top {
@@ -94,21 +102,24 @@ ul{
   width: 100%;
   
   .slick-slide {
-    background: #3CD690;
+    background: red;
     margin: 0 auto;
+    border-radius;
+    
+    
     
     .tall {
       margin: 30px auto 12px;
       border-radius: 3px;
       border: $thin-border;
-      width: 80%;
+      width: 70%;
     }
     
     
     .img-text {
       margin-bottom: 12px;
       font-family: $sans-serif-2;
-      font-size: 4.5vw;
+      font-size: vw;
       
     }
   }
@@ -118,8 +129,9 @@ ul{
 
 #cta-slide {
   img {
-      border: none;
+    border: 3px solid #333;
   }
+
 
 }
     
@@ -161,11 +173,12 @@ ul{
 }
 
 .caution {
-  color: red;
+  color: firebrick;
+  text-shadow: 2px 2px #333;
 }
 
 .wide {
-      width: 45%;
+      width: 50%;
       margin: 30px auto 12px;
       border-radius: 3px;
       border: $thin-border;
@@ -184,7 +197,7 @@ ul{
   }
 }
 .buttons {
-  padding: 30px;
+  padding: 20px;
   line-height: 1.5;
   background: #9CE35A;
   margin: 0 auto;
@@ -201,14 +214,13 @@ ul{
   background: #3E7E7E;
   
   .wide {
-    border-radius: none;
     border: none;
+    width: 30%;
   }
   .tall {
-    margin: 30px auto 12px;
-    border-radius: none;
+    margin: 0 auto;
     border: none;
-    width: 90%;
+    width: 30%;
   }
 
 }

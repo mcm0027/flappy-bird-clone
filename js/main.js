@@ -34,14 +34,7 @@ $(document).ready(function(){
   	$(".wide").hide();
   }
   
-  if (smallMQ.matches) {
-  	$(".navLinks").hide();
-  	$(".birdLeft").hide();
-  	$(".birdRight").hide();
-  } else {
-  	$(".nav").hide();
-  }
-  
+
   $(".submenu").hide();
   
   $(".menu").click( function() {
@@ -56,9 +49,29 @@ $(document).ready(function(){
     
   });
   
-  $(".screenshots li:nth-child(odd)").css("margin-left", "1em");
+$("#ctaBottom").click(function() {
+    $(this).velocity("transition.slideUpIn", {});  
+    $(this).velocity("callout.bounce");
+  });
+
   
+$("#ctaBottom").bind("inview", function(isVisible) {
+  // Event is triggered once the element becomes visible in the browser's viewport, and once when it becomes invisible
+  if (isVisible) {
+    $(this).velocity("callout.bounce");
+    console.log("element #foobar became visible in the browser's viewport");
+  } 
+});  
   
+$("#cta-slide img").bind("inview", function(isVisible) {
+  // Event is triggered once the element becomes visible in the browser's viewport, and once when it becomes invisible
+  if (isVisible) {
+    $(this).velocity("callout.bounce");
+    console.log("element #foobar became visible in the browser's viewport");
+  } 
+});  
+  
+
 
   $('.splash-top').slick({
     slidesToShow: 1,
@@ -66,9 +79,26 @@ $(document).ready(function(){
 		autoplay: true,
   	autoplaySpeed: 2500,
   });
-
-			
-  
 });
+
+$(function() {
+  $("#modal-1").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+
+  $(".modal-fade-screen, .modal-close").on("click", function() {
+    $(".modal-state:checked").prop("checked", false).change();
+  });
+
+  $(".modal-inner").on("click", function(e) {
+    e.stopPropagation();
+  });
+});
+
   
+
   
