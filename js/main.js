@@ -53,17 +53,42 @@ $("#ctaBottom").click(function() {
     $(this).velocity("transition.slideUpIn", {});  
     $(this).velocity("callout.bounce");
   });
-
+  
+var bottomBounceCount =0;
   
 $("#ctaBottom").bind("inview", function(isVisible) {
   // Event is triggered once the element becomes visible in the browser's viewport, and once when it becomes invisible
-  if (isVisible) {
+  if (isVisible && (bottomBounceCount <2)) {
     $(this).velocity("callout.bounce");
-    console.log("element #foobar became visible in the browser's viewport");
+    bottomBounceCount++;
   } 
 });  
   
-$("#cta-slide img").bind("inview", function(isVisible) {
+var fadeCount = 0;  
+  
+$(".body-text").bind("inview", function(isVisible) {
+
+  if ((isVisible) && (fadeCount < 1)) {
+    console.log("what what?");
+     $(this).velocity("transition.slideUpIn", 3000);
+    fadeCount++;
+  }
+});
+  
+var buttonFadeCount = 0;  
+$(".buttons").bind("inview", function(isVisible) {
+
+  if ((isVisible) && (buttonFadeCount < 1)) {
+    console.log("what what?");
+     $(this).velocity("transition.slideUpIn", 3000);
+    buttonFadeCount++;
+  }
+});
+
+
+  
+  
+$(".cta-slide").bind("inview", function(isVisible) {
   // Event is triggered once the element becomes visible in the browser's viewport, and once when it becomes invisible
   if (isVisible) {
     $(this).velocity("callout.bounce");
