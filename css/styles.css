@@ -621,7 +621,9 @@ ul li {
   margin: 30px auto 12px;
   border-radius: 3px;
   border: 1px solid #555;
-  width: 90%; }
+  width: 90%; 
+}
+
 
 .buttons {
   padding: 20px;
@@ -703,6 +705,8 @@ footer {
   }
   
 }
+
+
 
 @media (min-width: 501px) {
   .nav {
